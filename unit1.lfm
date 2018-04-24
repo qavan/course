@@ -7,6 +7,7 @@ object Form1: TForm1
   Caption = 'Central Dogma'
   ClientHeight = 474
   ClientWidth = 732
+  OnClose = FormClose
   OnCreate = FormCreate
   LCLVersion = '1.8.2.0'
   object StringGrid1: TStringGrid
@@ -17,10 +18,12 @@ object Form1: TForm1
     ColCount = 8
     Columns = <    
       item
+        Alignment = taCenter
         Title.Caption = 'Производитель'
         Width = 92
       end    
       item
+        Alignment = taCenter
         Title.Caption = 'Диагональ'
         Width = 70
       end    
@@ -82,7 +85,6 @@ object Form1: TForm1
     Top = 320
     Width = 155
     Caption = 'Добавить элемент'
-    Enabled = False
     OnClick = Button2Click
     TabOrder = 2
   end
@@ -91,8 +93,7 @@ object Form1: TForm1
     Height = 25
     Top = 344
     Width = 155
-    Caption = 'Изменить элемент'
-    Enabled = False
+    Caption = 'Найти по условию'
     OnClick = Button3Click
     TabOrder = 3
   end
@@ -101,8 +102,7 @@ object Form1: TForm1
     Height = 25
     Top = 368
     Width = 155
-    Caption = 'Удалить элемент'
-    Enabled = False
+    Caption = 'Удалить по условию'
     OnClick = Button4Click
     TabOrder = 4
   end
@@ -114,5 +114,23 @@ object Form1: TForm1
     Caption = 'printer'
     OnClick = Button5Click
     TabOrder = 5
+  end
+  object Button6: TButton
+    Left = 576
+    Height = 25
+    Top = 64
+    Width = 156
+    Caption = 'Проверка на пустоту'
+    OnClick = Button6Click
+    TabOrder = 6
+  end
+  object Button7: TButton
+    Left = 577
+    Height = 25
+    Top = 88
+    Width = 154
+    Caption = 'Удаление списка'
+    OnClick = Button7Click
+    TabOrder = 7
   end
 end
