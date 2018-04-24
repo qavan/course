@@ -1,0 +1,118 @@
+object Form1: TForm1
+  Left = 255
+  Height = 474
+  Top = 101
+  Width = 732
+  BorderStyle = bsDialog
+  Caption = 'Central Dogma'
+  ClientHeight = 474
+  ClientWidth = 732
+  OnCreate = FormCreate
+  LCLVersion = '1.8.2.0'
+  object StringGrid1: TStringGrid
+    Left = 0
+    Height = 464
+    Top = 8
+    Width = 576
+    ColCount = 8
+    Columns = <    
+      item
+        Title.Caption = 'Производитель'
+        Width = 92
+      end    
+      item
+        Title.Caption = 'Диагональ'
+        Width = 70
+      end    
+      item
+        Title.Caption = 'Процессор'
+        Width = 79
+      end    
+      item
+        Title.Caption = 'Частота'
+        Width = 74
+      end    
+      item
+        Title.Caption = 'ОЗУ'
+        Width = 64
+      end    
+      item
+        Title.Caption = 'HDD/SSD'
+        Width = 72
+      end    
+      item
+        Title.Caption = 'Вес'
+        Width = 64
+      end    
+      item
+        Title.Caption = 'Цена'
+        Width = 64
+      end>
+    FixedCols = 0
+    TabOrder = 0
+    ColWidths = (
+      92
+      70
+      79
+      74
+      64
+      72
+      64
+      64
+    )
+    Cells = (
+      1
+      0
+      0
+      'Производитель'
+    )
+  end
+  object Button1: TButton
+    Left = 576
+    Height = 25
+    Top = 8
+    Width = 155
+    Caption = 'Длина списка'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object Button2: TButton
+    Left = 577
+    Height = 25
+    Top = 320
+    Width = 155
+    Caption = 'Добавить элемент'
+    Enabled = False
+    OnClick = Button2Click
+    TabOrder = 2
+  end
+  object Button3: TButton
+    Left = 577
+    Height = 25
+    Top = 344
+    Width = 155
+    Caption = 'Изменить элемент'
+    Enabled = False
+    OnClick = Button3Click
+    TabOrder = 3
+  end
+  object Button4: TButton
+    Left = 577
+    Height = 25
+    Top = 368
+    Width = 155
+    Caption = 'Удалить элемент'
+    Enabled = False
+    OnClick = Button4Click
+    TabOrder = 4
+  end
+  object Button5: TButton
+    Left = 576
+    Height = 25
+    Top = 448
+    Width = 155
+    Caption = 'printer'
+    OnClick = Button5Click
+    TabOrder = 5
+  end
+end
