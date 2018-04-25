@@ -3,10 +3,14 @@ object Form2: TForm2
   Height = 166
   Top = 264
   Width = 530
-  Caption = 'Form2'
+  Caption = 'Central Dogma'
   ClientHeight = 166
   ClientWidth = 530
+  DefaultMonitor = dmMainForm
+  OnActivate = FormActivate
   OnClose = FormClose
+  OnDeactivate = FormDeactivate
+  Position = poMainFormCenter
   LCLVersion = '1.8.2.0'
   object Edit1: TEdit
     Left = 8
@@ -131,14 +135,14 @@ object Form2: TForm2
   object addb: TButton
     Left = 128
     Height = 25
-    Top = 112
+    Top = 136
     Width = 235
     Caption = 'Добавить'
     OnClick = addbClick
     TabOrder = 8
   end
   object delb: TButton
-    Left = 240
+    Left = 128
     Height = 25
     Top = 136
     Width = 235
@@ -155,12 +159,68 @@ object Form2: TForm2
     ParentColor = False
   end
   object findb: TButton
-    Left = 16
+    Left = 128
     Height = 25
     Top = 136
     Width = 233
     Caption = 'Найти'
     OnClick = findbClick
     TabOrder = 10
+  end
+  object rb1: TRadioButton
+    Left = 123
+    Height = 19
+    Top = 112
+    Width = 126
+    Caption = 'После выбранного'
+    Checked = True
+    TabOrder = 12
+    TabStop = True
+    Visible = False
+  end
+  object rb2: TRadioButton
+    Left = 272
+    Height = 19
+    Top = 112
+    Width = 106
+    Caption = 'До выбранного'
+    TabOrder = 11
+    Visible = False
+  end
+  object elems: TComboBox
+    Left = 104
+    Height = 23
+    Top = 64
+    Width = 132
+    ItemHeight = 15
+    Items.Strings = (
+      'Производитель'
+      'Диагональ'
+      'Процессор'
+      'Тактовая частота'
+      'ОЗУ'
+      'SSD/HDD'
+      'Вес'
+      'Цена'
+    )
+    Style = csDropDownList
+    TabOrder = 13
+  end
+  object Edit9: TEdit
+    Left = 243
+    Height = 23
+    Top = 64
+    Width = 152
+    TabOrder = 14
+    Text = 'Edit9'
+  end
+  object checkbox: TCheckBox
+    Left = 208
+    Height = 19
+    Top = 104
+    Width = 85
+    Caption = 'Удалить все'
+    TabOrder = 15
+    Visible = False
   end
 end

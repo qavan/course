@@ -13,6 +13,9 @@ type
 
   TForm2 = class(TForm)
     addb: TButton;
+    checkbox: TCheckBox;
+    elems: TComboBox;
+    Edit9: TEdit;
     findb: TButton;
     delb: TButton;
     Edit1: TEdit;
@@ -31,9 +34,16 @@ type
     Label6: TLabel;
     Label7: TLabel;
     Label8: TLabel;
+    rb1: TRadioButton;
+    rb2: TRadioButton;
     title: TLabel;
     procedure addbClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure delbClick(Sender: TObject);
+    procedure findbClick(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
+    procedure FormDeactivate(Sender: TObject);
   private
 
   public
@@ -51,18 +61,40 @@ uses unit1;
 
 procedure TForm2.addbClick(Sender: TObject);
 begin
+  Form2.Close;
+  addb.Tag:=addb.Tag+1;
+end;
+
+procedure TForm2.Button1Click(Sender: TObject);
+begin
+  ShowMessage(elems.ItemIndex.ToString);
+end;
+
+procedure TForm2.delbClick(Sender: TObject);
+begin
+  Form2.Close;
+end;
+
+procedure TForm2.findbClick(Sender: TObject);
+begin
+   Form2.findb.Tag:=0;
+   Form2.Close;
+end;
+
+procedure TForm2.FormActivate(Sender: TObject);
+begin
+  findb.Tag:=1;
+  Form2.Tag:=1;
+  addb.Tag:=1;
 end;
 
 procedure TForm2.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
-  Edit1.Caption:='';
-  Edit2.Caption:='';
-  Edit3.Caption:='';
-  Edit4.Caption:='';
-  Edit5.Caption:='';
-  Edit6.Caption:='';
-  Edit7.Caption:='';
-  Edit8.Caption:='';
+
+end;
+
+procedure TForm2.FormDeactivate(Sender: TObject);
+begin
 end;
 
 end.
