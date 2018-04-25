@@ -398,6 +398,7 @@ else if (i=1) or (i=6) then
    L:=L^.next;
    end;
  end;
+Form1.StringGrid1.Selection := TGridRect(Rect(0,n,Form1.StringGrid1.ColCount-1,n));
 ShowMessage('Минимальный - '+min);
 
 end;
@@ -459,7 +460,7 @@ else if (i=1) or (i=6) then
    end;
  end;
 ShowMessage('Максимальный - '+min);
-
+Form1.StringGrid1.Selection := TGridRect(Rect(0,n,Form1.StringGrid1.ColCount-1,n));
 end;
 ///\
 //||| Здесь разрыв, Сэр.
